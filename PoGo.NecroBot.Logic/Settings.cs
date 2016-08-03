@@ -241,7 +241,7 @@ namespace PoGo.NecroBot.Logic
         //amounts
         [DefaultValue(6)]
         public int MaxPokeballsPerPokemon;
-        [DefaultValue(2500)]
+        [DefaultValue(0)]
         public int MaxTravelDistanceInMeters;
         [DefaultValue(120)]
         public int TotalAmountOfPokeballsToKeep;

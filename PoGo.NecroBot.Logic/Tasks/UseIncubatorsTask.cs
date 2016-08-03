@@ -129,8 +129,8 @@ namespace PoGo.NecroBot.Logic.Tasks
         private static void SaveRememberedIncubators(List<IncubatorUsage> incubators, string filePath)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-
-            File.WriteAllText(filePath, JsonConvert.SerializeObject(incubators), Encoding.UTF8);
+            //devserial
+            //File.WriteAllText(filePath, JsonConvert.SerializeObject(incubators), Encoding.UTF8);
         }
 
         private class IncubatorUsage : IEquatable<IncubatorUsage>
