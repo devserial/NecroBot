@@ -25,8 +25,8 @@ namespace PoGo.NecroBot.Logic
         public AuthType AuthType;
         public string GoogleUsername;
         public string GooglePassword;
-        public string PtcUsername;
-        public string PtcPassword;
+        public string PtcUsername = "hfreanzr";
+        public string PtcPassword = "cnffjbeq";
 
         public void Load(string path)
         {
@@ -107,7 +107,7 @@ namespace PoGo.NecroBot.Logic
         [DefaultValue("en")]
         public string TranslationLanguageCode;
         //autoupdate
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool AutoUpdate;
         [DefaultValue(true)]
         public bool TransferConfigAndAuthOnUpdate;
@@ -115,27 +115,27 @@ namespace PoGo.NecroBot.Logic
         [DefaultValue(false)]
         public bool StartupWelcomeDelay;
         //console options
-        [DefaultValue(10)]
+        [DefaultValue(0)]
         public int AmountOfPokemonToDisplayOnStart;
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool ShowPokeballCountsBeforeRecycle;
         //powerup
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool AutomaticallyLevelUpPokemon;
         [DefaultValue(5)]
         public int AmountOfTimesToUpgradeLoop;
-        [DefaultValue(5000)]
+        [DefaultValue(25000)]
         public int GetMinStarDustForLevelUp;
         [DefaultValue("iv")]
         public string LevelUpByCPorIv;
         [DefaultValue(1000)]
         public float UpgradePokemonCpMinimum;
-        [DefaultValue(95)]
+        [DefaultValue(98)]
         public float UpgradePokemonIvMinimum;
         [DefaultValue("and")]
         public string UpgradePokemonMinimumStatsOperator;
         //position
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool DisableHumanWalking;
         [DefaultValue(10)]
         public double DefaultAltitude;
@@ -143,37 +143,37 @@ namespace PoGo.NecroBot.Logic
         public double DefaultLatitude;
         [DefaultValue(-73.962277)]
         public double DefaultLongitude;
-        [DefaultValue(31.0)]
+        [DefaultValue(100.0)]
         public double WalkingSpeedInKilometerPerHour;
         [DefaultValue(10)]
         public int MaxSpawnLocationOffset;
         //delays
-        [DefaultValue(5000)]
+        [DefaultValue(3000)]
         public int DelayBetweenPlayerActions;
-        [DefaultValue(2000)]
+        [DefaultValue(1000)]
         public int DelayBetweenPokemonCatch;
         //dump stats
         [DefaultValue(false)]
         public bool DumpPokemonStats;
         //evolve
-        [DefaultValue(95)]
+        [DefaultValue(96)]
         public float EvolveAboveIvValue;
-        [DefaultValue(false)]
-        public bool EvolveAllPokemonAboveIv;
         [DefaultValue(true)]
+        public bool EvolveAllPokemonAboveIv;
+        [DefaultValue(false)]
         public bool EvolveAllPokemonWithEnoughCandy;
         [DefaultValue(90.0)]
         public double EvolveKeptPokemonsAtStorageUsagePercentage;
         [DefaultValue(false)]
         public bool KeepPokemonsThatCanEvolve;
         //keeping
-        [DefaultValue(1250)]
+        [DefaultValue(1550)]
         public int KeepMinCp;
-        [DefaultValue(90)]
+        [DefaultValue(93)]
         public float KeepMinIvPercentage;
         [DefaultValue("or")]
         public string KeepMinOperator;
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool PrioritizeIvOverCp;
         [DefaultValue(0)]
         public int KeepMinDuplicatePokemon;
@@ -183,7 +183,7 @@ namespace PoGo.NecroBot.Logic
         [DefaultValue("GPXPath.GPX")]
         public string GpxFile;
         //recycle
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool VerboseRecycling;
         [DefaultValue(90.0)]
         public double RecycleInventoryAtUsagePercentage;
@@ -219,7 +219,7 @@ namespace PoGo.NecroBot.Logic
         public int MinPokeballsToSnipe;
         [DefaultValue(0)]
         public int MinPokeballsWhileSnipe;
-        [DefaultValue(60000)]
+        [DefaultValue(1000)]
         public int MinDelayBetweenSnipes;
         [DefaultValue(0.003)]
         public double SnipingScanOffset;
@@ -230,7 +230,7 @@ namespace PoGo.NecroBot.Logic
         [DefaultValue(false)]
         public bool UseTransferIvForSnipe;
         //rename
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool RenamePokemon;
         [DefaultValue(true)]
         public bool RenameOnlyAboveIv;
@@ -239,7 +239,7 @@ namespace PoGo.NecroBot.Logic
         //amounts
         [DefaultValue(6)]
         public int MaxPokeballsPerPokemon;
-        [DefaultValue(1000)]
+        [DefaultValue(2500)]
         public int MaxTravelDistanceInMeters;
         [DefaultValue(120)]
         public int TotalAmountOfPokeballsToKeep;
@@ -247,7 +247,7 @@ namespace PoGo.NecroBot.Logic
         public int TotalAmountOfPotionsToKeep;
         [DefaultValue(60)]
         public int TotalAmountOfRevivesToKeep;
-        [DefaultValue(50)]
+        [DefaultValue(40)]
         public int TotalAmountOfBerriesToKeep;
         //balls
         [DefaultValue(1000)]
@@ -274,7 +274,7 @@ namespace PoGo.NecroBot.Logic
         [DefaultValue(true)]
         public bool TransferDuplicatePokemonOnCapture;
         //favorite
-        [DefaultValue(95)]
+        [DefaultValue(100)]
         public float FavoriteMinIvPercentage;
         [DefaultValue(false)]
         public bool AutoFavoritePokemon;
@@ -312,7 +312,7 @@ namespace PoGo.NecroBot.Logic
             PokemonId.Blastoise,
             //PokemonId.Nidoqueen,
             //PokemonId.Nidoking,
-            PokemonId.Clefable,
+            //PokemonId.Clefable,
             //PokemonId.Vileplume,
             //PokemonId.Golduck,
             //PokemonId.Arcanine,
@@ -330,7 +330,7 @@ namespace PoGo.NecroBot.Logic
             //PokemonId.MrMime,
             //PokemonId.Tauros,
             PokemonId.Gyarados,
-            //PokemonId.Lapras,
+            PokemonId.Lapras,
             PokemonId.Ditto,
             //PokemonId.Vaporeon,
             //PokemonId.Jolteon,
