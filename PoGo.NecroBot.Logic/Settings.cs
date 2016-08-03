@@ -103,7 +103,9 @@ namespace PoGo.NecroBot.Logic
         [JsonIgnore] public string GeneralConfigPath;
         [JsonIgnore] public string ProfileConfigPath;
         [JsonIgnore] public string ProfilePath;
-        
+
+
+
         [DefaultValue("en")]
         public string TranslationLanguageCode;
         //autoupdate
